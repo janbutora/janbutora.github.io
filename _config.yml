@@ -15,15 +15,15 @@ minimal_mistakes_skin: "dark" # "air", "aqua", "contrast", "dark", "default", "d
 
 # Site Settings
 locale: "en-US"
-title: "Site Title"
+title: "Jan Butora"
 title_separator: "-"
-subtitle: "subtitle" # site tagline that appears below site title in masthead
-name: "FirstName LastName"
+subtitle: "Home" # site tagline that appears below site title in masthead
+name: "Jan Butora"
 description: "Description"
 github: [metadata]
-url: "https://cristal-sigma.github.io"
+url: "https://janbutora.github.io"
 baseurl: "" # the subpath of your site, e.g. "/blog"
-repository: "CRIStAL-Sigma/cristal-sigma.github.io"
+repository: "janbutora/janbutora.github.io"
 teaser: # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo: # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title: # overrides the website title displayed in the masthead, use " " for no title
@@ -97,13 +97,13 @@ analytics:
 # _includes/author-profile.html
 # _includes/author-profile-custom-links.html
 author:
-  name: "FirstName LastName"
-  avatar: "/assets/images/bio-photo.jpg"
-  bio: "My short bio<br>Second line<br>"
+  name: "Jan Butora"
+  avatar: "/assets/images/jan.jpg"
+  bio: "Postdoc<br>steganography<br>steganalysis<br>"
   location: "Lille, France"
-  email: "my.name@email.com"
-  github: "CRIStAL-Sigma"
-  webpage: "https://cristal-sigma.github.io"
+  email: "jbutora1@gmail.com"
+  github: "janbutora"
+  webpage: "https://janbutora.github.io"
   # Academic profiles
   # To make logo+link appear in author_profile on the left side of the page
   # - fill the corresponding field
@@ -115,7 +115,7 @@ author:
     acmdl:
     ads:
     africarxiv:
-    arxiv: "https://arxiv.org/a/<orcid-id | arxiv-id>"
+    arxiv:
     biorxiv:
     ceur:
     ciencia-vitae:
@@ -126,13 +126,13 @@ author:
     cv:
     datacite:
     dataverse:
-    dblp:
+    dblp: "https://dblp.org/pid/244/5269.html"
     depsy:
     doi:
     dryad:
     elsevier:
     figshare:
-    google-scholar: "https://scholar.google.com/citations?user=<user-id>=en"
+    google-scholar: "https://scholar.google.com/citations?user=cIH3sFkAAAAJ&hl=en"
     hal:
     hypothesis:
     ideas-repec:
@@ -153,7 +153,7 @@ author:
     open-materials:
     obp:
     openedition:
-    orcid: "https://orcid.org/<orcid-id>"
+    orcid: "https://orcid.org/0000-0002-2540-1420"
     osf:
     overleaf:
     philpapers:
@@ -165,7 +165,7 @@ author:
     pubmed:
     pubpeer:
     researcherid:
-    researchgate:
+    researchgate: "https://www.researchgate.net/profile/Jan-Butora"
     ror:
     sci-hub:
     scirate:
@@ -211,7 +211,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/CRIStAL-Sigma"
+      url: "https://github.com/janbutora"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
@@ -303,13 +303,13 @@ scholar:
   style: ./_bibliography/apa.csl # apa ./_bibliography/<any-style>.csl> from https://github.com/citation-style-language/styles
   locale: en
 
-  sort_by: year
+  sort_by: year, month
   order: descending
-  bibliography_list_attributes:
-    reversed: "reversed"
+  # bibliography_list_attributes:
+  #   reversed: "reversed"
 
   source: _bibliography # where .bib files are saved
-  bibliography: example.bib # .bib file
+  bibliography: my_papers.bib # .bib file
   # Custom bibliography display in _layouts/bibliography.html
   bibliography_template: bibliography
 

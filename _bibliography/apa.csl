@@ -1897,17 +1897,10 @@
           </choose>
         </if>
         <else>
-          <group delimiter=" ">
-            <group delimiter=". " suffix=".">
-              <text macro="author-bib"/>
-              <text macro="date-bib"/>
-              <text macro="title-and-descriptions"/>
-              <text macro="container"/>
-              <text macro="event"/>
-              <text macro="publisher"/>
-            </group>
-            <!-- <text macro="access"/> -->
-            <text macro="publication-history"/>
+          <group delimiter="" suffix="">
+            <text macro="title-and-descriptions" font-weight="bold" display="block"/>
+            <text macro="author-bib" display="block"/>
+            <text macro="container" display="block"/>
           </group>
         </else>
       </choose>
