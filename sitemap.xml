@@ -7,9 +7,6 @@
 <loc>http://localhost:4000/publications/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/teaching/</loc>
-</url>
-<url>
 <loc>http://localhost:4000/assets/pdfs/11_SURGERIES_v8_preprint.pdf</loc>
 <lastmod>2021-10-10T20:46:37+02:00</lastmod>
 </url>
@@ -64,6 +61,10 @@
 <url>
 <loc>http://localhost:4000/assets/pdfs/dc-si-5.pdf</loc>
 <lastmod>2021-10-10T20:42:09+02:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/assets/pdfs/lDEAs_v7.pdf</loc>
+<lastmod>2021-12-09T11:23:25+01:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/assets/pdfs/rounding-mystery-09.pdf</loc>
