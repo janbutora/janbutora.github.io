@@ -14,6 +14,9 @@ toc_sticky: true
 
 <!-- Publications-->
 ## Publications
+### 2022
+  {% bibliography --query @*[year=2022]* %}
+
 ### 2021
   {% bibliography --query @*[year=2021]* %}
 
