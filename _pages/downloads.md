@@ -17,8 +17,8 @@ toc_sticky: true
 | Name        | File                                                           | SW      | Proposed |
 | :---------- | :------------------------------------------------------------- | :-----  | :------: |
 | SVP         | [Embed_SVP.py](/assets/scripts/Embed_SVP.py)                   | Python  |    [1]   |
-| JIN-SRNet   | [JIN_SRNet.zip](/assets/scripts/JIN_SRNet.zip)                 | PyTorch |    [2]   |
-| PQ-UNIWARD  | [PQ-UNIWARD_matlab.zip](/assets/scripts/PQ-UNIWARD_matlab.zip) | Matlab  |    [3]   |
+| PQ-UNIWARD  | [PQ-UNIWARD_matlab.zip](/assets/scripts/PQ-UNIWARD_matlab.zip) | Matlab  |    [2]   |
+| JIN-SRNet   | [JIN_SRNet.zip](/assets/scripts/JIN_SRNet.zip)                 | PyTorch |    [3]   |
 | JPEG Tools  | [utils.py](/assets/scripts/utils.py)                           | Python  |     -    |
 | ixlnx2      | [ixlnx2.npy](/assets/scripts/ixlnx2.npy)                       | NumPy   |     -    |
 
