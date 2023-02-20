@@ -12,7 +12,7 @@ class Embedding_simulator():
         p0 = 1 - pPM1
         p0[p0 <= 0] = 1
         pPM1[pPM1==0]=1
-        P = np.hstack((p0.flatten(1), pPM1.flatten(1)))
+        P = np.hstack((p0.flatten(), pPM1.flatten()))
         H = -((P) * np.log2(P))
         Ht = np.nansum(H)
         return Ht
@@ -123,6 +123,99 @@ class Embedding_simulator():
                 m1 = m2
             iterations += 1 # for monitoring the number of iterations
         return lbd
+
+    @staticmethod
+    def calc_lambda_FI(payload, solver, kargs):
+        [L,R] = [1e-6, 1e-2]
+        fL = Embedding_simulator.ternary_entropy(*solver(L, *kargs)) - payload
+        fR = Embedding_simulator.ternary_entropy(*solver(R, *kargs)) - payload
+        #pdb.set_trace()
+        max_iter = 20
+        i = 0
+        while (fL*fR > 0) and (i<max_iter):
+            i += 1
+            if fL < 0:
+                L = R
+                R *= 2
+                fR = Embedding_simulator.ternary_entropy(*solver(R, *kargs)) - payload
+            else:
+                R = L
+                L /= 2
+                fL = Embedding_simulator.ternary_entropy(*solver(L, *kargs)) - payload
+
+        i, fM, TM = 0, 1, np.zeros([max_iter,2])
+        while (np.abs(fM) >= 1e0) and (i < max_iter):
+            M = (L+R)/2
+            fM = Embedding_simulator.ternary_entropy(*solver(M, *kargs)) - payload
+            if fL*fM < 0:
+                R = M
+                fR = fM
+            else:
+                L = M
+                fL = fM
+            TM[i,:] = [fM, M]
+            i += 1
+
+        if i == max_iter:
+            M = TM[np.argmin(np.abs(TM[:i,0])),1]
+
+        pP1, pM1 = solver(M, *kargs)
+
+        return pP1, pM1, M
+
+    @staticmethod
+    def calc_lambda_FI_binary(FI, payload):
+        L, R = 5e-2, 5e1
+        ixlnx2 = np.load('ixlnx2.npy')
+        fL = Embedding_simulator.binary_entropy(1/invxlnx2_fast(L*FI, ixlnx2)) - payload
+        fR = Embedding_simulator.binary_entropy(1/invxlnx2_fast(R*FI, ixlnx2)) - payload
+        max_iter = 80
+        i = 0
+        while (fL*fR > 0) and (i<max_iter):
+            i += 1
+            if fL > 0:
+                R *= 2
+                fR = Embedding_simulator.binary_entropy(1/invxlnx2_fast(R*FI, ixlnx2)) - payload
+            else:
+                L /= 2
+                fL = Embedding_simulator.binary_entropy(1/invxlnx2_fast(L*FI, ixlnx2)) - payload
+
+        i, fM, TM = 0, 1, np.zeros([max_iter,2])
+        while (np.abs(fM) > 1e-2) and (i < max_iter):
+            M = (L+R)/2
+            fM = Embedding_simulator.binary_entropy(1/invxlnx2_fast(M*FI, ixlnx2)) - payload
+            if fL*fM < 0:
+                R = M
+                fR = fM
+            else:
+                L = M
+                fl = fM
+            TM[i,:] = [fM, M]
+            i += 1
+
+        if i == max_iter:
+            M = TM[np.argmin(np.abs(TM[:i,0])),1]
+
+        beta = 1/invxlnx2_fast(M*FI, ixlnx2)
+        return beta
+
+    @staticmethod
+    def invxlnx2_fast(y,f):
+        i_large = y>=1000
+        i_small = y<1000
+        iyL = (np.floor(y[i_small]/0.01)).astype(np.int32)
+        iyR = iyL + 1
+        iyR[iyR>=100000] = 100000-1
+
+        x = np.zeros(y.shape)
+        x[i_small] = f[iyL] + (y[i_small]-(iyL)*0.01)*(f[iyR]-f[iyL])
+
+        z = y[i_large]/np.log(y[i_large]-1)
+        for j in range(20):
+            z = y[i_large]/np.log(z-1)
+
+        x[i_large] = z
+        return x
 
     @staticmethod
     def compute_proba_binary(rhoPM1, message_length, n):

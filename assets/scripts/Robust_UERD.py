@@ -2,7 +2,7 @@ import numpy as np
 import jpeglib
 from PIL import Image
 import os
-from utils import *
+from JPEG_utils import *
 from embedding_simulator import Embedding_simulator
 
 _WET_COST_ROBUST = 10 ** 16
@@ -49,7 +49,6 @@ def compute_Dmn(c_coeffs, c_quant):
     Comutation of energies of blocks
     """
     (m, n) = c_coeffs.shape
-    #Utils.output_debug(str(c_coeffs.shape))
     m = m // 8
     n = n // 8
     energies = np.zeros((m+2, n+2))
@@ -93,7 +92,6 @@ def UERD(c_struct, i=0):
         return rho
     except (TypeError):
         pass
-        #raise UnholyException('This image does not contain component ' + str(i))
 
 def compute_rhos(c_struct, i=0):
     rho = UERD(c_struct, i)
@@ -203,7 +201,7 @@ def comp_rob_set_per_mode(pseudo_stego, im_name  , P1_STRUCTs, scan_array, m, qu
     robust_set[current['0']*current['p1']*current['m1']*previous['p1']*previous['m1']] = 1 # -1, 0, 1 possible
 
     # Undo the embedding changes
-    for s in sets: #no need?
+    for s in sets:
         P1[s][current_mode] = np.copy(pseudo_stego[current_mode])
         P1_STRUCTs[s].coef_arrays[0][:] = np.copy(reshape_view_to_original(P1[s], P1_STRUCTs[s].coef_arrays[0]))
 
