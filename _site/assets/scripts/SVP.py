@@ -1,12 +1,9 @@
-import jpegio as jio
 from skimage.util import view_as_blocks
 import numpy as np
 import scipy.signal
 
-import argparse
-import sys
-
-from utils import *
+from embedding_simulator import Embedding_simulator
+from JPEG_utils import *
 
 
 def JUNI_costs(C_COEFFS, Q):
@@ -159,7 +156,7 @@ def compute_costs_SVP(S_view, C_var, Q, k, l):
 def Embed_lattice_SVP(S_view, C_var, Q, k, l, m, uni_costs):  # always binary embedding!
     rhoP1, rhoM1, direction = compute_costs_SVP(S_view, C_var, Q, k, l)
     FI = np.min([rhoP1, rhoM1], axis=0) * uni_costs
-    beta = binary_probs(FI, m)
+    beta = Embedding_simulator.compute_proba_binary(FI, m, S_view.size)
     r = np.random.random(S_view[:, k, l].shape)
     modifPM1 = r < beta
     S_COEFFS = S_view[:, k, l]
@@ -171,9 +168,7 @@ def Embed_lattice_SVP(S_view, C_var, Q, k, l, m, uni_costs):  # always binary em
     return S_COEFFS, betaP1, betaM1
 
 
-def Embed_SVP(C_STRUCT, payload, uni_costs=False):
-    C_COEFFS = C_STRUCT.coef_arrays[0]
-    Q = C_STRUCT.quant_tables[0]
+def SVP(C_COEFFS, Q, payload, uni_costs=False):
     C_view = view_as_blocks(C_COEFFS, (8, 8)).reshape(-1, 8, 8)
     S_view = np.copy(C_view)
     betaP1 = np.zeros(S_view.shape)
@@ -202,7 +197,5 @@ def Embed_SVP(C_STRUCT, payload, uni_costs=False):
     S_COEFFS = reshape_view_to_original(S_view, C_COEFFS)
     betaP1 = reshape_view_to_original(betaP1, C_COEFFS)
     betaM1 = reshape_view_to_original(betaM1, C_COEFFS)
-    S_STRUCT = C_STRUCT
-    S_STRUCT.coef_arrays[0][:] = S_COEFFS
 
-    return S_STRUCT
+    return S_COEFFS
