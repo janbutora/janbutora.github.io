@@ -26,8 +26,12 @@
 <lastmod>2021-05-06T01:13:34+02:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/assets/pdfs/CORESA_23.pdf</loc>
+<lastmod>2023-05-22T12:53:27+02:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/assets/pdfs/CV.pdf</loc>
-<lastmod>2023-04-21T09:58:21+02:00</lastmod>
+<lastmod>2023-05-23T14:30:51+02:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/assets/pdfs/Diversified-stego-source.pdf</loc>
@@ -40,6 +44,10 @@
 <url>
 <loc>http://localhost:4000/assets/pdfs/IN-pretraining-6.pdf</loc>
 <lastmod>2021-10-10T20:43:53+02:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/assets/pdfs/QF100_3.pdf</loc>
+<lastmod>2023-05-05T14:57:49+02:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/assets/pdfs/SI-pert-modulation.pdf</loc>
@@ -88,5 +96,9 @@
 <url>
 <loc>http://localhost:4000/assets/pdfs/steganalysis-JPEG-source-11.pdf</loc>
 <lastmod>2021-10-10T20:55:46+02:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/assets/pdfs/timing_attacks.pdf</loc>
+<lastmod>2023-05-22T12:54:03+02:00</lastmod>
 </url>
 </urlset>
