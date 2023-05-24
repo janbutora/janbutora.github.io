@@ -19,7 +19,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gems-
       # Standard usage
-      - uses: helaili/jekyll-action@v2
+      - uses: helaili/jekyll-action@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           # Specify the Jekyll source location as a parameter
