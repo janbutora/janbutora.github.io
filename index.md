@@ -10,7 +10,7 @@ Before that, I was a PhD student at [Binghamton University](https://www.binghamt
 
 ## Research interests
 
-Steganography, steganalysis, statistical image modelling, applied deep learning
+Media forensics, steganography, steganalysis, generated content detection, watermarking, statistical image modelling, reliable deep learning
 
 <div align="middle" style="margin-top: 50px">
   <a href="http://www.cnrs.fr/en"><img class='logo' alt="logo_cnrs" src="assets/images/logo_cnrs.png" align="bottom" style="width:100px;height:100px;"></a>
