@@ -24,4 +24,4 @@ jobs:
           # Specify the Jekyll source location as a parameter
           #jekyll_src: "."
           # Specify the target branch (optional)
-          target_branch: "gh-pages"
+          branch: "gh-pages"
