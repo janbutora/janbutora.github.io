@@ -25,3 +25,5 @@ jobs:
           jekyll_src: "."
           # Specify the target branch (optional)
           target_branch: "gh-pages"
+	env:
+	  JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
