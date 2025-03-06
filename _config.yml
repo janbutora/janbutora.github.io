@@ -10,26 +10,26 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-remote_theme: "mmistakes/minimal-mistakes@4.22.0"
-minimal_mistakes_skin: "dark" # "air", "aqua", "contrast", "dark", "default", "dirt", "neon", "mint", "plum", "sunrise"
+remote_theme: 'mmistakes/minimal-mistakes@4.22.0'
+minimal_mistakes_skin: 'dark' # "air", "aqua", "contrast", "dark", "default", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale: "en-US"
-title: "Jan Butora"
-title_separator: "-"
-subtitle: "Home" # site tagline that appears below site title in masthead
-name: "Jan Butora"
-description: "Description"
+locale: 'en-US'
+title: 'Jan Butora'
+title_separator: '-'
+subtitle: 'Home' # site tagline that appears below site title in masthead
+name: 'Jan Butora'
+description: 'Description'
 github: [metadata]
-url: "https://janbutora.github.io"
-baseurl: "" # the subpath of your site, e.g. "/blog"
-repository: "janbutora/janbutora.github.io"
+url: 'https://janbutora.github.io'
+baseurl: '' # the subpath of your site, e.g. "/blog"
+repository: 'janbutora/janbutora.github.io'
 teaser: # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo: # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title: # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute: 200
-date_format: "%Y-%m-%d"
+date_format: '%Y-%m-%d'
 comments:
   provider: # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
@@ -87,9 +87,9 @@ social:
 
 # Analytics
 analytics:
-  provider: "google-gtag" # false (default), "google", "google-universal", "google-gtag", "custom"
+  provider: 'google-gtag' # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
-    tracking_id: "G-P9C5NEBJ7N"
+    tracking_id: 'G-P9C5NEBJ7N'
     anonymize_ip: false # true, false (default)
 
 # Site Author
@@ -97,13 +97,13 @@ analytics:
 # _includes/author-profile.html
 # _includes/author-profile-custom-links.html
 author:
-  name: "Jan Butora"
-  avatar: "/assets/images/jan.jpg"
-  bio: "Postdoc<br>steganography<br>steganalysis<br>"
-  location: "Lille, France"
-  email: "jbutora1@gmail.com"
-  github: "janbutora"
-  webpage: "https://janbutora.github.io"
+  name: 'Jan Butora'
+  avatar: '/assets/images/jan.jpg'
+  bio: 'Researcher<br>Steganography<br>Watermarking<br>AI detection<br>'
+  location: 'Lille, France'
+  email: 'jan.butora@cnrs.fr'
+  github: 'janbutora'
+  webpage: 'https://janbutora.github.io'
   # Academic profiles
   # To make logo+link appear in author_profile on the left side of the page
   # - fill the corresponding field
@@ -126,13 +126,13 @@ author:
     cv:
     datacite:
     dataverse:
-    dblp: "https://dblp.org/pid/244/5269.html"
+    dblp: 'https://dblp.org/pid/244/5269.html'
     depsy:
     doi:
     dryad:
     elsevier:
     figshare:
-    google-scholar: "https://scholar.google.com/citations?user=cIH3sFkAAAAJ&hl=en"
+    google-scholar: 'https://scholar.google.com/citations?user=cIH3sFkAAAAJ&hl=en'
     hal:
     hypothesis:
     ideas-repec:
@@ -153,7 +153,7 @@ author:
     open-materials:
     obp:
     openedition:
-    orcid: "https://orcid.org/0000-0002-2540-1420"
+    orcid: 'https://orcid.org/0000-0002-2540-1420'
     osf:
     overleaf:
     philpapers:
@@ -165,7 +165,7 @@ author:
     pubmed:
     pubpeer:
     researcherid:
-    researchgate: "https://www.researchgate.net/profile/Jan-Butora"
+    researchgate: 'https://www.researchgate.net/profile/Jan-Butora'
     ror:
     sci-hub:
     scirate:
@@ -179,23 +179,23 @@ author:
   links:
     # See also how links are displayed in _includes/author-profile.html
     # uncomment url to make link appear
-    - label: "Email" # used above
-      icon: "fas fa-fw fa-envelope"
+    - label: 'Email' # used above
+      icon: 'fas fa-fw fa-envelope'
       # url: "mailto:your.name@email.com"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
+    - label: 'Website'
+      icon: 'fas fa-fw fa-link'
       # url: "https://<webpage-link>"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
+    - label: 'Twitter'
+      icon: 'fab fa-fw fa-twitter-square'
       # url: "https://twitter.com/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
+    - label: 'Facebook'
+      icon: 'fab fa-fw fa-facebook-square'
       # url: "https://facebook.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
+    - label: 'GitHub'
+      icon: 'fab fa-fw fa-github'
       # url: "https://github.com/CRIStAL-Sigma"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
+    - label: 'Instagram'
+      icon: 'fab fa-fw fa-instagram'
       # url: "https://instagram.com/"
 
 # Site Footer
@@ -203,23 +203,23 @@ author:
 # - add custom links in _includes/footer/custom.html
 footer:
   links: # uncomment url to make link appear
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
+    - label: 'Twitter'
+      icon: 'fab fa-fw fa-twitter-square'
       # url:
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
+    - label: 'Facebook'
+      icon: 'fab fa-fw fa-facebook-square'
       # url:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/janbutora"
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
+    - label: 'GitHub'
+      icon: 'fab fa-fw fa-github'
+      url: 'https://github.com/janbutora'
+    - label: 'GitLab'
+      icon: 'fab fa-fw fa-gitlab'
       # url:
-    - label: "Bitbucket"
-      icon: "fab fa-fw fa-bitbucket"
+    - label: 'Bitbucket'
+      icon: 'fab fa-fw fa-bitbucket'
       # url:
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
+    - label: 'Instagram'
+      icon: 'fab fa-fw fa-instagram'
       # url:
 
 # Reading Files
@@ -227,8 +227,8 @@ include:
   - .htaccess
   - _pages
 exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
+  - '*.sublime-project'
+  - '*.sublime-workspace'
   - vendor
   - .asset-cache
   - .bundle
@@ -256,8 +256,8 @@ exclude:
 keep_files:
   - .git
   - .svn
-encoding: "utf-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+encoding: 'utf-8'
+markdown_ext: 'markdown,mkdown,mkdn,mkd,md'
 
 # Conversion
 markdown: kramdown
@@ -313,7 +313,7 @@ scholar:
   # Custom bibliography display in _layouts/bibliography.html
   bibliography_template: bibliography
 
-  query: "@*"
+  query: '@*'
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -362,7 +362,7 @@ compress_html:
 defaults:
   # _posts
   - scope:
-      path: ""
+      path: ''
       type: posts
     values:
       author_profile: true
@@ -374,7 +374,7 @@ defaults:
       show_date: true
   # _pages
   - scope:
-      path: ""
+      path: ''
       type: pages
     values:
       author_profile: true
