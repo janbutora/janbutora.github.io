@@ -18,10 +18,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gems-
       # Standard usage
-      - uses: jeffreytse/jekyll-deploy-action@master #helaili/jekyll-action@v2
+      - uses: helaili/jekyll-action@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           # Specify the Jekyll source location as a parameter
           #jekyll_src: "."
           # Specify the target branch (optional)
-          branch: "gh-pages"
+          target_branch: "gh-pages"
