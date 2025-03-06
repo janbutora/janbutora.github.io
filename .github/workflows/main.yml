@@ -27,3 +27,4 @@ jobs:
           target_branch: "gh-pages"
         env:
           JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
