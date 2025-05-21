@@ -299,6 +299,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-20
+  arm64-darwin-24
 
 DEPENDENCIES
   github-pages
@@ -306,4 +307,4 @@ DEPENDENCIES
   minimal-mistakes-jekyll
 
 BUNDLED WITH
-   2.3.7
+   2.3.26
