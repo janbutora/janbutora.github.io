@@ -15,6 +15,10 @@ toc_sticky: true
 
 ## Publications
 
+### 2026
+
+{% bibliography --query @*[year=2026]* %}
+
 ### 2025
 
 {% bibliography --query @*[year=2025]* %}

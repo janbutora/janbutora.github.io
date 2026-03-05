@@ -11,7 +11,9 @@ source "https://rubygems.org"
 
 # To upgrade, run `bundle update`.
 
-gem "github-pages", group: :jekyll_plugins
+gem "ffi", ">= 1.17"
+gem "jekyll", "~> 4.4"
+
 gem "minimal-mistakes-jekyll"
 
 # The following plugins are automatically loaded by the theme-gem:
