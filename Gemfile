@@ -23,7 +23,7 @@ gem "minimal-mistakes-jekyll"
 #   gem "jekyll-feed"
 #   gem "jekyll-include-cache"
 #
-# If you have any other plugins, put them here!
+# If you have any other plugins, put them here
 group :jekyll_plugins do
     gem "jekyll-scholar"
 end
