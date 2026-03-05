@@ -11,9 +11,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Deploy Jekyll site
+      - name: Setup Ruby 3.2
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+          
+      - name: Build and deploy
         uses: helaili/jekyll-action@v2
         with:
-          target_branch: gh-pages
           token: ${{ secrets.GITHUB_TOKEN }}
-          jekyll_src: .
+          target_branch: gh-pages
